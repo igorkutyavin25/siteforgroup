@@ -1,0 +1,488 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto' sans-serif;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* header шапка страницы */
+header.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 80px;
+    background-color: #213B7E;
+    color: #FFFFFF;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    margin: 16px 17px;
+}
+
+.site-menu {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.menu-link:hover {
+    background-color: #FFFFFF;
+    color: #213B7E;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+.active-link {
+    color: #213B7E;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+.button-enter {
+    background-color: #EA5D21;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 15px 16px;
+    padding: 16px 50px;
+    cursor: pointer;
+}
+
+/* Popup форма для входа */
+.login-popup {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    min-height: 418px;
+    padding: 26px 28px 50px;
+    background: #FFFFFF;
+    border: 1px solid #213B7E;
+    background-color: #FFFFFF;
+    animation-duration: 1.0s;
+    animation-fill-mode:backwards;
+    animation-name: sdvigIn;
+}
+
+@keyframes sdvigIn {
+    0% {
+    opacity: 0;
+    transform: translateY(50%);
+    transform: translateX(-50%);
+    }  
+    100% {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    } 
+}
+
+.closePopUp {
+    position: absolute;
+    right: 20px;
+    width: 32px;
+    padding: 5px 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.login-h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form>input {
+    width: 100%;
+    max-width: 500px;
+    min-height: 35px;
+    margin-bottom: 56px;
+    border: 1px solid #808080;
+}
+
+.login-enter {
+    width: 444px;
+    background-color: #FFFFFF;
+    border: 1px solid #808080;
+    font-size: 24px;
+    line-height: 28px;
+    color: #808080;
+    padding: 10px;
+}
+
+.popup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 152px;
+    min-height: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #EA6113;
+    border: none;
+    cursor: pointer;
+}
+
+.show-popup {
+    display: block;
+}
+
+.close-popup {
+    display: none;
+}
+
+/* main основная часть страницы */
+.main {
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    flex-grow: 1;
+    padding: 0 14px;
+}
+
+.picture {
+    width: 100%;
+    max-width: 523px;
+}
+
+.main-h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.main-h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.wrap {
+    max-width: 634px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.Plashka {
+    transform: translate(660px, -336px);
+    max-width: 129px;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #646464;
+
+}
+
+/* Students */
+.main-student {
+    font-family: 'Roboto';
+}
+.studentname {
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-align: center;
+
+}
+.kursstudents {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    cursor: pointer; 
+}
+.studentscard {
+    padding-left: 25px;
+}
+.border-foto {
+    width: 200px;
+    height: 270px;
+    background: #86C6F4;
+}
+.border-foto:hover {
+    border: #b2f486 solid 5px;
+    background-color: #00ffea;
+    
+    
+}
+
+.new-student {
+    position: absolute;
+    width: 90px;
+    height: 21px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #3AA828;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    transform: translate(138%,-50%);
+}
+
+/* about */
+.main-about {
+        width: 100%;
+        max-width: 850px;
+        height: auto;
+        margin: 0 auto;
+        flex-grow: 1;
+        padding: 0 15px
+    }
+.text1 {
+    font-family: 'Roboto';
+    font-size: 25px;
+    
+}
+.video {
+    width: 100%;
+    max-width: 820px;
+    min-height: 550px;
+    border: #EA5D21 solid 2px;
+}
+
+/* Contacts */
+.main-contacts{
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    flex-grow: 1;
+    padding: 0 15px
+}
+.address-student {
+    margin-left: 20%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+.text {
+    margin-left: 20%;
+    font-family: 'Roboto';
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    
+}
+.text-contacts {
+    margin-left: 20%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+.phone-text {
+    margin-left: 20%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline;
+    
+}
+
+.map {
+    width: 100%;
+    max-width: 1260px;
+    min-height: 370px;
+    border: 0;
+}
+
+/* about me page */
+.box {
+    display: flex;
+    font-family: 'Roboto';
+}
+.my-name {
+    color: #008000;
+}
+
+.hobbies {
+    color: blue;
+}
+
+.list-of-hobbie {
+    text-transform: uppercase;
+}
+.picture-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 550px;
+    margin: 15px;
+}
+.fencing {
+    width: 100%;
+    max-width: 200px;
+}
+.programming {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 200px;
+    min-height: 200px;
+}
+
+.velo {
+    width: 100%;
+    max-width: 200px;
+}
+.travel {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 20px;
+}
+/* footer нижняя часть страницы */
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 60px;
+    background-color: #213B7E;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.waterznak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 19px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer-link {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+em {
+    color: #CF5510;
+}
+
+/* Медиазапросы(Адаптив под разные устройства) */
+/* @media (max-width:1300px) {
+    .main {
+        width: auto;
+    }
+} */
+@media (max-width:920px) {
+    .Plashka {
+        transform: translate(188%,-10%);
+    }
+}
+
+@media (max-width:760px) {
+    .menu-link {
+        font-size: 15px;
+    }
+
+    .button-enter {
+        padding: 12px 25px;
+    }
+
+    .wrap {
+        width: auto;
+    }
+}
+@media (max-width:625px) {
+    .menu-link {
+        font-size: 13px;
+    }
+
+@media (max-width:608px) {
+    .menu-link {
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+}
+@media (max-width:562px) {
+    .button-enter {
+        padding: 10px 20px;
+    }
+
+    .menu-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:520px) {
+    .menu-link {
+        margin: 10px 0;
+
+    }
+
+    .logo {
+        width: auto;
+        height: auto;
+    }
+
+    .button-enter {
+        padding: 5px 10px;
+    }
+
+    header.wrapper {
+        flex-direction: column;
+    }
+
+    .site-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Plashka {
+        transform: translate(58%,-10%);
+    }
+}
